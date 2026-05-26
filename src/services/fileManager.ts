@@ -24,7 +24,7 @@ class ManagedImageFile implements ImageFile {
     }
 
     getPath(): string {
-        return this.uri.fsPath;
+        return this.uri.path;
     }
 
     async exists(): Promise<boolean> {
