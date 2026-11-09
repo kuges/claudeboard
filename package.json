@@ -2,7 +2,7 @@
 	"name": "claudeboard",
 	"displayName": "Claudeboard",
 	"description": "Share images with Claude Code running on a remote server via Remote-SSH",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"publisher": "dkodr",
 	"author": "Dariusz Kuśnierek",
 	"license": "MIT",
