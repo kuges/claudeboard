@@ -24,6 +24,13 @@ class ManagedImageFile implements ImageFile {
     }
 
     getPath(): string {
+        // For remote URIs (vscode-remote://ssh-remote+host/...), fsPath is rendered
+        // with the *local* OS conventions: on a Windows client it produces
+        // "\Users\me\project\image.png" for a POSIX remote. The remote shell and
+        // Claude Code need the remote's own path, which is uri.path.
+        if (this.uri.scheme !== 'file') {
+            return this.uri.path;
+        }
         return this.uri.fsPath;
     }
 
